@@ -1,0 +1,62 @@
+{
+  "billing_multiplier": "0.12",
+  "currency": {
+    "code": "CNY",
+    "symbol": "￥",
+    "usd_exchange_rate": "1"
+  },
+  "display": {
+    "decimal_places": 6,
+    "show_billed_usd": true
+  },
+  "models": {
+    "gpt-5.6-sol": {
+      "aliases": ["gpt-5.6"],
+      "long_context_threshold": 272000,
+      "short_context": {
+        "input": "5.00",
+        "cached_input": "0.50",
+        "cache_write_input": "6.25",
+        "output": "30.00"
+      },
+      "long_context": {
+        "input": "10.00",
+        "cached_input": "1.00",
+        "cache_write_input": "12.50",
+        "output": "45.00"
+      }
+    },
+    "gpt-5.6-terra": {
+      "aliases": [],
+      "long_context_threshold": 272000,
+      "short_context": {
+        "input": "2.00",
+        "cached_input": "0.20",
+        "cache_write_input": "2.50",
+        "output": "12.00"
+      },
+      "long_context": {
+        "input": "4.00",
+        "cached_input": "0.40",
+        "cache_write_input": "5.00",
+        "output": "18.00"
+      }
+    },
+    "gpt-5.6-luna": {
+      "aliases": [],
+      "long_context_threshold": 272000,
+      "short_context": {
+        "input": "0.20",
+        "cached_input": "0.02",
+        "cache_write_input": "0.25",
+        "output": "1.20"
+      },
+      "long_context": {
+        "input": "0.40",
+        "cached_input": "0.04",
+        "cache_write_input": "0.50",
+        "output": "1.80"
+      }
+    }
+  }
+}

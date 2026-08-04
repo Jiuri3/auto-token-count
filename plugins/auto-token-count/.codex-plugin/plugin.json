@@ -1,0 +1,26 @@
+{
+  "name": "auto-token-count",
+  "version": "0.1.0",
+  "description": "\u5728\u672c\u5730\u7edf\u8ba1 Codex \u6bcf\u8f6e token\uff0c\u5e76\u6309\u81ea\u5b9a\u4e49\u4ef7\u683c\u3001\u500d\u7387\u4e0e\u6c47\u7387\u8ba1\u7b97\u8d39\u7528\u3002",
+  "author": {
+    "name": "Jiuri3"
+  },
+  "homepage": "https://github.com/Jiuri3/auto-token-count",
+  "repository": "https://github.com/Jiuri3/auto-token-count",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Auto Token Count",
+    "shortDescription": "\u9010\u8f6e\u7edf\u8ba1 token \u4e0e\u6298\u7b97\u8d39\u7528",
+    "longDescription": "\u8bfb\u53d6\u672c\u5730 Codex \u4f1a\u8bdd\u65e5\u5fd7\uff0c\u5728\u6bcf\u8f6e\u7ed3\u675f\u65f6\u6309\u6a21\u578b\u4ef7\u683c\u3001\u6e20\u9053\u500d\u7387\u548c\u7f8e\u5143\u5151\u4eba\u6c11\u5e01\u6c47\u7387\u8ba1\u7b97\u8d39\u7528\u3002",
+    "developerName": "Jiuri3",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "\u67e5\u770b\u672c\u6b21\u4f1a\u8bdd\u7684 token \u4e0e\u8d39\u7528\u660e\u7ec6\u3002",
+      "\u6253\u5f00 Auto Token Count \u7684\u4ef7\u683c\u914d\u7f6e\u3002"
+    ]
+  }
+}

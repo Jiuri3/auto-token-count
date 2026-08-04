@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${PLUGIN_ROOT}/hooks/stop.py",
+            "statusMessage": "正在统计本轮 token 费用"
+          }
+        ]
+      }
+    ]
+  }
+}
