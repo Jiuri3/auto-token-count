@@ -110,7 +110,7 @@ class TokenCostTests(unittest.TestCase):
         self.assertIn("US$", summary)
         self.assertIn("长上下文 1 次", summary)
 
-    # 验证 Stop hook 只读取夹具并返回 continue=true。
+    # 验证 Stop hook 在非 UTF-8 输出环境中仍能返回正常中文。
     def test_stop_hook_without_model_request(self):
         hook_input = {
             "session_id": "session-test",
@@ -126,6 +126,7 @@ class TokenCostTests(unittest.TestCase):
         environment = os.environ.copy()
         environment["PLUGIN_ROOT"] = str(PLUGIN_ROOT)
         environment["CODEX_TOKEN_COST_CONFIG"] = str(self.config_path)
+        environment["PYTHONIOENCODING"] = "ascii"
         completed = subprocess.run(
             [sys.executable, str(PLUGIN_ROOT / "hooks" / "stop.py")],
             input=json.dumps(hook_input),
@@ -134,9 +135,11 @@ class TokenCostTests(unittest.TestCase):
             check=True,
             env=environment,
         )
+        self.assertTrue(completed.stdout.isascii())
         output = json.loads(completed.stdout)
         self.assertTrue(output["continue"])
-        self.assertIn("systemMessage", output)
+        self.assertIn("本轮", output["systemMessage"])
+        self.assertIn("￥", output["systemMessage"])
         self.assertNotIn("decision", output)
 
 

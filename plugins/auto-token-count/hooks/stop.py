@@ -18,7 +18,7 @@ def emit_message(message):
         "continue": True,
         "systemMessage": message,
     }
-    print(json.dumps(result, ensure_ascii=False))
+    print(json.dumps(result))
 
 
 # 读取当前轮次并输出自动费用信息。
